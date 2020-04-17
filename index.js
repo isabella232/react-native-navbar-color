@@ -8,9 +8,9 @@ module.exports = {
          return NavigationBar.apiLevel;
       }
    },
-   setColor: (color) => {
+   setColor: (color, isLight) => {
       if (Platform.OS == 'android' && NavigationBar.apiLevel >= 21) {
-         return NavigationBar.setColor(color);
+         return NavigationBar.setColor(color, isLight);
       }
    },
    setStatusBarColor: (color, animation) => {
